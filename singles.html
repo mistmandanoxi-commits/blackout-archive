@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Сингли — Blackout</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+<style>
+body {margin:0; padding:0; font-family:'Roboto',sans-serif; background:#1a0000; color:#f5f5f5; text-align:center;}
+header {background:#000; padding:20px; box-shadow:0 0 20px #ff4500;}
+header h1{color:#ff4500; margin:0;}
+.nav-btn{margin:0 10px; padding:8px 15px; background:#000; color:#ff4500; border:2px solid #ff4500; border-radius:5px; cursor:pointer; transition:0.3s;}
+.nav-btn:hover{background:#ff4500; color:#000;}
+#back-main{margin-top:10px; padding:10px 20px; background:#000; color:#ff4500; border:2px solid #ff4500; cursor:pointer; border-radius:5px;}
+#search{margin-top:15px; padding:8px 12px; width:50%; border-radius:5px; border:1px solid #ff4500; background-color:#000; color:#ffbf00;}
+.track-card{background:#2a0000; padding:15px; margin:15px auto; border-radius:10px; box-shadow:0 0 15px #FFD700; width:320px; animation:fadeIn 1s forwards;}
+.track-card img{width:300px; height:300px; object-fit:cover; border-radius:10px; box-shadow:0 0 15px #FFD700; margin-bottom:10px;}
+.track-card h2{color:#ff4500;}
+.audio-player{display:flex; align-items:center; background-color:#000; padding:10px; border-radius:10px; box-shadow:0 0 10px #ffbf00;}
+.play-btn{background-color:#ffbf00; border:none; color:#000; font-size:1.2rem; padding:5px 10px; margin-right:10px; cursor:pointer; border-radius:5px;}
+.seek-bar{flex-grow:1; margin-right:10px; -webkit-appearance:none; height:5px; background:#444; border-radius:5px;}
+.seek-bar::-webkit-slider-thumb{-webkit-appearance:none; width:15px; height:15px; background:#ffbf00; border-radius:50%; cursor:pointer;}
+.time{color:#ffbf00; min-width:60px; font-family:monospace;}
+@keyframes fadeIn{from{opacity:0;} to{opacity:1;}}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Сингли — Blackout</h1>
+<nav>
+<button class="nav-btn" onclick="window.location.href='index.html'">Головна</button>
+<button class="nav-btn" onclick="window.location.href='album.html'">Альбом</button>
+</nav>
+<button id="back-main">⬅ Повернутись на головну</button>
+<input type="text" id="search" placeholder="Пошук треку...">
+</header>
+
+<section class="album-container">
+
+    <div class="track-card">
+        <img src="images/gimme-more.jpg" alt="Gimme More">
+        <h2>Gimme More</h2>
+        <div class="audio-player">
+            <button class="play-btn">▶</button>
+            <input type="range" class="seek-bar" value="0" min="0" step="1">
+            <span class="time">0:00 / 4:11</span>
+            <audio class="track-audio"><source src="audio/gimmemore.mp3" type="audio/mpeg"></audio>
+        </div>
+        <p>Пік позиція: #3 Billboard Hot 100 | Оцінка критиків: ★★★★★★★★★☆</p>
+    </div>
+
+
+    <div class="track-card">
+        <img src="images/piece-of-me.png" alt="Piece of Me">
+        <h2>Piece of Me</h2>
+        <div class="audio-player">
+            <button class="play-btn">▶</button>
+            <input type="range" class="seek-bar" value="0" min="0" step="1">
+            <span class="time">0:00 / 3:32</span>
+            <audio class="track-audio"><source src="audio/pieceofme.mp3" type="audio/mpeg"></audio>
+        </div>
+        <p>Пік позиція: #18 Billboard Hot 100 | Оцінка критиків: ★★★★★★★★☆☆</p>
+    </div>
+
+
+    <div class="track-card">
+        <img src="images/break-the-ice.png" alt="Break the Ice">
+        <h2>Break the Ice</h2>
+        <div class="audio-player">
+            <button class="play-btn">▶</button>
+            <input type="range" class="seek-bar" value="0" min="0" step="1">
+            <span class="time">0:00 / 3:16</span>
+            <audio class="track-audio"><source src="audio/breaktheice.mp3" type="audio/mpeg"></audio>
+        </div>
+        <p>Пік позиція: #43 Billboard Hot 100 | Оцінка критиків: ★★★★★★★☆☆☆</p>
+    </div>
+
+
+    <div class="track-card">
+        <img src="images/radar.png" alt="Radar">
+        <h2>Radar</h2>
+        <div class="audio-player">
+            <button class="play-btn">▶</button>
+            <input type="range" class="seek-bar" value="0" min="0" step="1">
+            <span class="time">0:00 / 3:49</span>
+            <audio class="track-audio"><source src="audio/radar.mp3" type="audio/mpeg"></audio>
+        </div>
+        <p>Пік позиція: #88 Billboard Hot 100 | Оцінка критиків: ★★★★★★☆☆☆☆</p>
+    </div>
+</section>
+
+<audio autoplay loop id="bg-music">
+    <source src="audio/bti.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+document.getElementById("back-main").addEventListener("click", ()=>{window.location.href="index.html";});
+
+
+document.getElementById("search").addEventListener("input", e=>{
+    const value = e.target.value.toLowerCase().trim();
+    document.querySelectorAll(".track-card").forEach(card=>{
+        const title = card.querySelector("h2").textContent.toLowerCase();
+        card.style.display = title.includes(value) ? "block" : "none";
+    });
+});
+
+
+const bgMusic=document.getElementById("bg-music");
+document.querySelectorAll(".track-card").forEach(card=>{
+    const audio=card.querySelector(".track-audio");
+    const playBtn=card.querySelector(".play-btn");
+    const seekBar=card.querySelector(".seek-bar");
+    const timeDisplay=card.querySelector(".time");
+
+    playBtn.addEventListener("click", ()=>{
+        document.querySelectorAll(".track-audio").forEach(a=>{if(a!==audio)a.pause();});
+        if(bgMusic) bgMusic.pause();
+        if(audio.paused){audio.play(); playBtn.textContent="⏸";}
+        else{audio.pause(); playBtn.textContent="▶";}
+    });
+
+    audio.addEventListener("timeupdate", ()=>{
+        seekBar.value=audio.currentTime;
+        let mins=Math.floor(audio.currentTime/60);
+        let secs=Math.floor(audio.currentTime%60);
+        let totalMins=Math.floor(audio.duration/60);
+        let totalSecs=Math.floor(audio.duration%60);
+        if(secs<10) secs="0"+secs;
+        if(totalSecs<10) totalSecs="0"+totalSecs;
+        timeDisplay.textContent=`${mins}:${secs} / ${totalMins}:${totalSecs}`;
+    });
+
+    audio.addEventListener("loadedmetadata", ()=>{seekBar.max=audio.duration;});
+    seekBar.addEventListener("input", ()=>{audio.currentTime=seekBar.value;});
+    audio.addEventListener("ended", ()=>{playBtn.textContent="▶"; if(bgMusic) bgMusic.play();});
+});
+</script>
+</body>
+</html>

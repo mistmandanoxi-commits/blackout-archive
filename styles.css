@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:wght@500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: #1a0000; /* темно-червоний фон */
+    color: #fff;
+}
+
+header {
+    background: #0d0000;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px #b8860b;
+}
+
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 50px;
+    color: #b8860b; /* золото */
+    text-shadow: 0 0 20px #ff4500;
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ff6347;
+    margin: 0 20px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #b8860b;
+    text-shadow: 0 0 15px #ff6347;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+}
+
+.album-cover, .single-card img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 0 25px #b8860b;
+    transition: 0.3s;
+}
+
+.album-cover:hover, .single-card img:hover {
+    transform: scale(1.05) rotateY(5deg) rotateX(5deg);
+    box-shadow: 0 0 40px #ff4500;
+}
+
+.section-photo {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 25px #b8860b;
+}
+
+.tracklist {
+    background: #220000;
+    padding: 20px;
+    border-left: 4px solid #b8860b;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.single-card {
+    background: #220000;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 2px solid #b8860b;
+    box-shadow: 0 0 20px #b8860b;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single-card:hover {
+    transform: scale(1.05) rotateY(5deg);
+    box-shadow: 0 0 35px #ff4500;
+}
+
+.rating {
+    font-size: 22px;
+    color: gold;
+}
+
+.search-box input {
+    width: 70%;
+    padding: 12px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    border: 2px solid #b8860b;
+    background: #220000;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.album-cover {
+    width: 400px; /* раніше 600px */
+    height: 400px;
+    display: block;
+    margin: 0 auto 30px auto; /* центр по горизонталі */
+}
+
+.section-photo {
+    width: 180px; /* раніше 300px */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 20px #b8860b;
+}
+
+
+.history .album-cover {
+    width: 400px;
+    height: 400px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #b8860b;
+}
+.single-item {
+    margin-bottom: 25px;
+}
+.single-item {
+    margin-bottom: 30px;
+}
+.play-sample,
+.stop-sample {
+    padding: 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 5px;
+    border-radius: 8px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    background: #100000;
+    color: #FFD9BF;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    text-align: center;
+    padding: 30px;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #FF4D4D;
+    letter-spacing: 3px;
+}
+
+.header h1 span {
+    color: #FFB347;
+    text-shadow: 0 0 10px #FF4500;
+}
+
+
+#search {
+    padding: 12px 25px;
+    width: 60%;
+    margin-top: 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+
+
+.singles-grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    gap: 30px;
+    padding: 40px;
+}
+
+
+.single-card {
+    background: #1a0000;
+    border: 1px solid #330000;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(255, 50, 50, 0.1);
+}
+
+.single-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 30px rgba(255, 80, 80, 0.4);
+}
+
+
+.cover {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 0 20px #ff3c00;
+    transition: 0.4s;
+}
+
+.cover:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+
+.fade {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Кнопки */
+.sample-btn {
+    background: #8B0000;
+    color: #FFD9BF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.sample-btn:hover {
+    background: #FF4500;
+    box-shadow: 0 0 10px #FF5F1F;
+}
+
+/* Тексти */
+.rating {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.info {
+    color: #ff9080;
+}

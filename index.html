@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Blackout — Britney Spears</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a0000;
+    color: #f5f5f5;
+}
+
+header {
+    background-color: #000;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 20px #ff4500;
+}
+
+nav {
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    margin: 0 10px;
+    padding: 8px 15px;
+    background: #000;
+    color: #ff4500;
+    border: 2px solid #ff4500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #ff4500;
+    color: #000;
+}
+
+.header-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #8B0000, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px 0;
+}
+
+.main-content {
+    max-width: 1000px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.album-cover {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid #FFD700;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #FFD700;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.album-cover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px #FFD700;
+}
+
+.album-description {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #ff4500;
+}
+
+.facts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.fact-card {
+    background: #2a0000;
+    border: 2px solid #ff4500;
+    border-radius: 10px;
+    width: 280px;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 0 0 15px #FFD700;
+    transition: transform 0.3s;
+}
+
+.fact-card:hover {
+    transform: translateY(-5px);
+}
+
+.fact-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #FFD700;
+    margin-bottom: 10px;
+}
+
+.tracklist {
+    margin-top: 50px;
+    text-align: left;
+    background-color: #2a0000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff4500;
+}
+
+.tracklist h3 {
+    color: #ff4500;
+    margin-bottom: 15px;
+}
+
+.tracklist ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tracklist li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ff4500;
+    font-size: 1.1rem;
+}
+
+audio#bg-music {
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <button class="nav-btn" onclick="window.location.href='index.html'">Головна</button>
+        <button class="nav-btn" onclick="window.location.href='singles.html'">Сингли</button>
+        <button class="nav-btn" onclick="window.location.href='album.html'">Альбом</button>
+    </nav>
+    <h1 class="header-title">Blackout — Britney Spears</h1>
+    <img src="images/blackout-cover.png" alt="Обкладинка альбому" class="album-cover">
+</header>
+
+<div class="main-content">
+    <p class="album-description">
+        "Blackout" — п'ятий студійний альбом Britney Spears, випущений у 2007 році. <b></b>
+        <b></b> Альбом отримав визнання критиків за інноваційне електронне та поп-звучання, Біблією поп музики став культовим серед фанатів. <b>
+        <p> </p><b></b> "Блекаут" досяг комерційного успіху, дебютувавши на другому місці в чарті Billboard 200 і отримавши платиновий статус. <b></b>
+        <p> </p><b> </b>Він вважається віхою у кар'єрі артистки завдяки переходу до більш зрілого і танцювального звучання, а пісні «Gimme More» та «Piece of Me» стали хітами, отримавши 100 мільйонів переглядів на YouTube, а останню з них було названо «Найкращою піснею століття». 
+        </b>
+    </p>
+
+    <div class="facts-container">
+        <div class="fact-card">
+            <img src="images/promo1.jpg" alt="Факт 1">
+            <p><strong>Факт 1:</strong> Альбом записувався під час складного періоду життя Britney, але отримав величезний успіх.</p>
+        </div>
+        <div class="fact-card">
+            <img src="images/promo2.jpg" alt="Факт 2">
+            <p><strong>Факт 2:</strong> "Gimme More" став культовим лід-синглом з інтро "It's Britney, bitch".</p>
+        </div>
+        <div class="fact-card">
+            <img src="images/promo3.jpg" alt="Факт 3">
+            <p><strong>Факт 3:</strong> Альбом часто називають "біблією поп-музики" завдяки його впливу на EDM-поп.</p>
+        </div>
+        <div class="fact-card">
+            <img src="images/promo4.jpg" alt="Факт 4">
+            <p><strong>Факт 4:</strong> Критики відзначили більш темне та експериментальне звучання порівняно з попередніми роботами.</p>
+        </div>
+        <div class="fact-card">
+            <img src="images/promo5.jpg" alt="Факт 5">
+            <p><strong>Факт 5:</strong> Альбом надихнув багатьох сучасних артистів на створення електронної поп-музики.</p>
+        </div>
+    </div>
+
+    <div class="tracklist">
+        <h3>Трекліст альбому:</h3>
+        <ul>
+            <li>1. Gimme More</li>
+            <li>2. Piece of Me</li>
+            <li>3. Radar</li>
+            <li>4. Break the Ice</li>
+            <li>5. Heaven on Earth</li>
+            <li>6. Get Naked (I Got a Plan)</li>
+            <li>7. Freakshow</li>
+            <li>8. Toy Soldier</li>
+            <li>9. Hot as Ice</li>
+            <li>10. Ooh Ooh Baby</li>
+            <li>11. Perfect Lover</li>
+            <li>12. Why Should I Be Sad</li>
+        
+        </ul>
+    </div>
+</div>
+
+<audio autoplay loop id="bg-music">
+    <source src="audio/gimmemore.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>

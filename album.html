@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Альбом Blackout — Britney Spears</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Lato&display=swap" rel="stylesheet">
+<style>
+body {
+    margin:0;
+    padding:0;
+    font-family:'Lato', sans-serif;
+    background:#120000;
+    color:#f5f5f5;
+}
+header {
+    background:#000;
+    padding:20px 0;
+    box-shadow:0 0 25px #ff4500;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    text-align:center;
+}
+header h1 {
+    color:#FF4500;
+    font-family:'Cinzel', serif;
+    margin:0;
+    font-size:2rem;
+}
+.nav-btn {
+    margin:0 10px;
+    padding:8px 15px;
+    background:#000;
+    color:#FF4500;
+    border:2px solid #FF4500;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+    font-family:'Cinzel', serif;
+}
+.nav-btn:hover {
+    background:#FF4500;
+    color:#000;
+}
+.main-content {
+    max-width:1000px;
+    margin:150px auto 50px auto;
+    text-align:center;
+}
+.album-cover {
+    width:400px;
+    height:400px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 0 40px #FFD700;
+    margin-bottom:20px;
+}
+.intro-text {
+    font-family:'Cinzel', serif;
+    font-size:1.2rem;
+    color:#FFD700;
+    margin-bottom:30px;
+}
+.track {
+    display:flex;
+    align-items:center;
+    background:#2a0000;
+    padding:10px;
+    margin:15px 0;
+    border-radius:10px;
+    box-shadow:0 0 20px #FF4500;
+}
+.track img {
+    width:80px;
+    height:80px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-right:15px;
+}
+.track-info {
+    flex:1;
+    text-align:left;
+}
+.track-info h3 {
+    margin:0;
+    color:#FFD700;
+}
+.track-info p {
+    margin:0;
+    font-size:0.9rem;
+    color:#FF4500;
+}
+audio {
+    width:250px;
+    background:#8B0000;
+    accent-color:#FFD700; 
+}
+input[type="text"], textarea {
+    padding:10px;
+    width:90%;
+    margin:10px auto;
+    display:block;
+    border-radius:5px;
+    border:none;
+    background:#2a0000;
+    color:#FFD700;
+    font-size:1rem;
+}
+textarea {
+    min-height:120px;
+    resize:none;
+}
+button.send-btn {
+    background:#000;
+    color:#FF4500;
+    border:2px solid #FF4500;
+    padding:10px 20px;
+    cursor:pointer;
+    border-radius:5px;
+    margin-bottom:30px;
+}
+button.send-btn:hover {
+    background:#FF4500;
+    color:#000;
+}
+.footer {
+    margin-top:20px;
+    color:#FFD700;
+    font-size:1rem;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color:#FF4500; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Трекліст</h1>
+<nav>
+<button class="nav-btn" onclick="window.location.href='index.html'">Головна</button>
+<button class="nav-btn" onclick="window.location.href='singles.html'">Сингли</button>
+</nav>
+</header>
+
+<div class="main-content">
+    <img src="images/blackout-cover.png" alt="Обкладинка альбому" class="album-cover">
+    <p></p>Ця сторінка створена для безкоштовного прослуховування Біблії поп музики - Blackout!<br>
+    <input type="text" id="search" placeholder="Пошук треку по назві...">
+    <div id="tracks">
+        <div class="track">
+            <img src="images/gimme-more.jpg" alt="Gimme More">
+            <div class="track-info">
+                <h3>Gimme More</h3>
+                <p>Лід-сингл • 4:11</p>
+            </div>
+            <audio controls>
+                <source src="audio/gimmemore.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="track">
+            <img src="images/piece-of-me.png" alt="Piece of Me">
+            <div class="track-info">
+                <h3>Piece of Me</h3>
+                <p>Лід-сингл • 3:32</p>
+            </div>
+            <audio controls>
+                <source src="audio/pieceofme.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="track">
+            <img src="images/radar.png" alt="Radar">
+            <div class="track-info">
+                <h3>Radar</h3>
+                <p>Лід-сингл • 3:49</p>
+            </div>
+            <audio controls>
+                <source src="audio/radar.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="track">
+            <img src="images/break-the-ice.png" alt="Break the Ice">
+            <div class="track-info">
+                <h3>Break the Ice</h3>
+                <p>Лід-сингл • 3:16</p>
+            </div>
+            <audio controls>
+                <source src="audio/breaktheice.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+         <div class="track">
+            <img src="images/blackout-cover.png" alt="Heaven on Earth">
+            <div class="track-info">
+                <h3>Heaven on Earth</h3>
+                <p>Альбомний Сингл • 4:53</p>
+            </div>
+            <audio controls>
+                <source src="audio/heavenonearth.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="track">
+            <img src="images/blackout-cover.png" alt="Get Naked">
+            <div class="track-info">
+                <h3>Get Naked (I Got a Plan)</h3>
+                <p>Альбомний Сингл • 4:10</p>
+            </div>
+            <audio controls>
+                <source src="audio/getnaked.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="track">
+            <img src="images/blackout-cover.png" alt="Freakshow">
+            <div class="track-info">
+                <h3>Freakshow</h3>
+                <p>Альбомний Сингл • 2:55</p>
+            </div>
+            <audio controls>
+                <source src="audio/freak.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="track">
+            <img src="images/blackout-cover.png" alt="Toy Soldier">
+            <div class="track-info">
+                <h3>Toy Soldier</h3>
+                <p>Альбомний Сингл • 3:22</p>
+            </div>
+            <audio controls>
+                <source src="audio/toy.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="track">
+            <img src="images/blackout-cover.png" alt="Hot as Ice">
+            <div class="track-info">
+                <h3>Hot as Ice</h3>
+                <p>Альбомний Сингл • 3:17</p>
+            </div>
+            <audio controls>
+                <source src="audio/hotas.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="track">
+            <img src="images/blackout-cover.png" alt="Ooh Ooh Baby">
+            <div class="track-info">
+                <h3>Ooh Ooh Baby</h3>
+                <p>Альбомний Сингл • 3:28</p>
+            </div>
+            <audio controls>
+                <source src="audio/oohooh.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="track">
+            <img src="images/blackout-cover.png" alt="Perfect Lover">
+            <div class="track-info">
+                <h3>Perfect Lover</h3>
+                <p>Альбомний Сингл • 3:03</p>
+            </div>
+            <audio controls>
+                <source src="audio/perfect.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="track">
+            <img src="images/blackout-cover.png" alt="Why Should I Be Sad">
+            <div class="track-info">
+                <h3>Why Should I Be Sad</h3>
+                <p>Альбомний Сингл • 3:12</p>
+            </div>
+            <audio controls>
+                <source src="audio/why.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+    <p class="intro-text">
+        Напишіть нижче в полі відгуків, що вам сподобалось, що ні.
+    </p>
+
+    <textarea placeholder="Ваш відгук про альбом..."></textarea>
+    <button class="send-btn">Відправити</button>
+    <div class="footer">
+        Made by Mayson Moonlee. Enjoy!
+    </div>
+
+</div>
+
+<script>
+const searchInput = document.getElementById("search");
+searchInput.addEventListener("input", function(){
+    const filter = this.value.toLowerCase();
+    const tracks = document.querySelectorAll("#tracks .track");
+    tracks.forEach(track => {
+        const title = track.querySelector("h3").textContent.toLowerCase();
+        if(title.includes(filter)){
+            track.style.display = "flex";
+        } else {
+            track.style.display = "none";
+        }
+    });
+});
+</script>
+
+</body>
+</html>
